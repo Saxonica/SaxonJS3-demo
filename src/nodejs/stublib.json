@@ -1,0 +1,45 @@
+{
+  "namespace": "https://saxonica.com/ns/example/functions",
+  "signatures": {
+    "sum-two-integers": {
+      "as": "xs:decimal",
+      "param": ["xs:decimal", "xs:integer"],
+      "arity": [2]
+    },
+    "sum-sequence": {
+      "as": "xs:decimal",
+      "param": ["xs:decimal*"],
+      "arity": [1]
+    },
+    "sum-array": {
+      "as": "xs:decimal",
+      "param": ["array(xs:decimal)"],
+      "arity": [1]
+    },
+    "squares-sequences": {
+      "as": "xs:decimal*",
+      "param": ["xs:decimal*"],
+      "arity": [1]
+    },
+    "squares-array-sequence": {
+      "as": "xs:decimal*",
+      "param": ["array(xs:decimal)"],
+      "arity": [1]
+    },
+    "squares-sequence-array": {
+      "as": "array(xs:decimal)",
+      "param": ["xs:decimal*"],
+      "arity": [1]
+    },
+    "squares-arrays": {
+      "as": "array(xs:decimal)",
+      "param": ["array(xs:decimal)"],
+      "arity": [1]
+    },
+    "returns-promise": {
+      "as": "xs:string",
+      "param": [],
+      "arity": [0]
+    }
+  }
+}

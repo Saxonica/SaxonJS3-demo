@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Hello, world</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" href="/css/style.css"/>
+  <script type="text/javascript" defer="defer" src="/js/SaxonJS3.rt.js"></script>
+  <script type="text/javascript">
+window.onload = function() {
+  SaxonJS.transform({
+    "stylesheetLocation": "smoketest.sef.json",
+    "initialTemplate": "Q{http://www.w3.org/1999/XSL/Transform}initial-template"
+  }, "async");
+}
+  </script>
+</head>
+<body>
+  <div id="hello">
+    <p>Loading…</p>
+  </div>
+</body>
+</html>
