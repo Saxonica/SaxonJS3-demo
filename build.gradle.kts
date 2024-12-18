@@ -12,6 +12,8 @@ repositories {
 
 val serverPort = project.findProperty("serverPort")?.toString() ?: "3002"
 
+defaultTasks("setup")
+
 tasks.register("setupNodeJs") {
   doLast {
     copy {
@@ -33,6 +35,9 @@ tasks.register("setupNodeJs") {
       from(layout.buildDirectory.dir("saxonjs3/browser")) {
         include("*.js")
       }
+      from(layout.buildDirectory.dir("saxonjs3/saxonjs-he-package")) {
+        include("*.js")
+      }
     }
   }
 
@@ -43,10 +48,15 @@ tasks.register("setupNodeJs") {
   }
 }
 
-tasks.register<Exec>("server") {
+tasks.register("setup") {
   dependsOn("copyStaticFiles")
   dependsOn("setupNodeJs")
   dependsOn("compileXslt")
+  // Just some place to hang dependencies
+}
+
+tasks.register<Exec>("server") {
+  dependsOn("setup")
   workingDir(layout.buildDirectory.get().asFile)
   commandLine(listOf("node", "server.js"))
 }

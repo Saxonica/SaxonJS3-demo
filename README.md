@@ -1,4 +1,4 @@
-# SaxonJS 3.0 demo
+# SaxonJS 3.0.0-beta1 demo
 
 This repository contains a number of small examples designed to highlight
 specific new features of SaxonJS 3.0.
@@ -22,4 +22,27 @@ The source code for the demos is in `src`.
 
 ## More details
 
-T.B.D.
+There are four sets of demos for the browser and Node.js:
+
+### Browser demos
+
+The demo page at `http://localhost:3002/` contains links to several demos.
+
+1. The smoke test demo just makes sure that everything is working
+2. The “paged data” demo uses `ixsl:promise` to read from a “paged” web service API.
+3. The “sum” and “squares” demos show how various kinds of arguments and return
+   types are handled when calling JavaScript functions from XSLT.
+4. The “promise” demo shows how to return a promise from a JavaScript extension
+   function and process the result in XSLT.
+
+### Node.js demos
+
+After running setup, there are directories under `build` that contain the corresponding
+demos for Node.js.
+
+1. The `n_sum-*` demos are the sum demos for Node.js
+2. The `n_squares_*` demos are the squares demos for Node.js
+
+In each case, the demo can be run by changing to the demo directory
+and running `node run.js`.
+

@@ -3,3 +3,13 @@
 :root {
     font-size: 13pt;
 }
+
+html {
+    border: 0;
+    padding: 0;
+    background-color: #E4EEF0;
+}
+
+body {
+    margin: 1rem;
+}
