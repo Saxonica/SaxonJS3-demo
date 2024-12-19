@@ -87,7 +87,7 @@ xslFiles.forEach {
     inputs.file(layout.projectDirectory.file("src/${path}"))
     outputs.file(layout.buildDirectory.file(path.replace(".xsl", ".sef.json")))
     workingDir(layout.buildDirectory.get().asFile)
-    commandLine("node", "node_modules/xslt3/xslt3.js",
+    commandLine("node", "node_modules/xslt3-he/xslt3.js",
                 "-xsl:../src/${path}", "-export:${path.replace(".xsl", ".sef.json")}",
                 "-stublib:stublib.json",
                 "-nogo", "-ns:##html5")
